@@ -1,0 +1,6 @@
+config HSOC_USB_FEATURE
+	bool "Enable usb feature"
+	depends on MACH_HSOC_SMARTPHONE
+	help
+	  Enable the config if enable usb feature .
+	  If unsure, say N

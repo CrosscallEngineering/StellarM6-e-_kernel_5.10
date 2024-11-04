@@ -1,0 +1,7 @@
+config SUBSYS_ERR_REPORT
+	tristate "report subsystem failed event by uevent"
+	depends on PRODUCT_BASEINFO
+	default n
+	help
+	  Enable it when collect the subsystem state report
+	  if unsure, say N

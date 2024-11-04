@@ -1,0 +1,18 @@
+
+source "drivers/soc/hsoc/base/Kconfig"
+
+source "drivers/soc/hsoc/pm/Kconfig"
+
+source "drivers/soc/hsoc/usb/Kconfig"
+
+source "drivers/soc/hsoc/pmic/Kconfig"
+
+source "drivers/soc/hsoc/debug/Kconfig"
+
+source "drivers/soc/hsoc/efuse/Kconfig"
+
+source "drivers/soc/hsoc/sensor/Kconfig"
+
+source "drivers/soc/hsoc/misc/Kconfig"
+
+source "drivers/soc/hsoc/abnormal_stats/Kconfig"

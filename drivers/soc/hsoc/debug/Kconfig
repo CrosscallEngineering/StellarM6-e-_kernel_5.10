@@ -1,0 +1,37 @@
+config PRODUCT_DEBUGINFO
+	depends on MACH_HSOC_SMARTPHONE
+	tristate "device debug info of product"
+	help
+	  Provide a methed to register the peripheral device
+	  infomation of product.
+
+config PANIC_HANDLE
+	bool "panic handle flow"
+	depends on PRODUCT_DEBUGINFO
+	default n
+	help
+	  Provide a methed for panic handle.
+
+config RELEASE_VERSION
+	bool "release version flag"
+	depends on PRODUCT_DEBUGINFO
+	default n
+	help
+	  The information of release version.
+
+config DEBUG_BOOT_TIME
+	bool "debug boot performance"
+	depends on PRODUCT_DEBUGINFO
+	depends on MSM_BOOT_STATS
+	default n
+	help
+	  The way to debug the boot time.
+
+config BOOTLOADER_LOG
+	tristate "show bootloader log"
+	depends on BSP_DEBUG_CTRL
+	default n
+	help
+	  If enable, you can get boot log via
+	  "cat /proc/debug_control/bootloader_log"
+

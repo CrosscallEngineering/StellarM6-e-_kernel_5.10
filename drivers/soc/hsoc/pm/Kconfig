@@ -1,0 +1,29 @@
+config HPM_DEBUG
+	tristate "pm debug"
+	depends on MACH_HSOC_SMARTPHONE
+	default n
+	help
+	  print clk, gpio, vreg status when the device enter suspend mode.
+
+config HSUSPEND_SYS_SYNC
+	bool "add the suspend sys sync to the workqueue"
+	depends on HPM_DEBUG
+	depends on SUSPEND_SKIP_SYNC
+	default n
+	help
+	  Enable it when the suspend/resume has some sync issue.
+	  if unsure, say N
+
+config HSUSPEND_DEBUG
+	tristate "Suspend debug and optimize"
+	depends on HPM_DEBUG
+	default n
+	help
+	  print suspend debug log and suspend file sync.
+
+config HQPNP_REG_DEBUG
+	tristate "raw register debug support for QPNP PMIC"
+	depends on SPMI
+	default n
+	help
+	  This option enables SMPS/LDO/ADC debug for Qualcomm's QPNP PMIC

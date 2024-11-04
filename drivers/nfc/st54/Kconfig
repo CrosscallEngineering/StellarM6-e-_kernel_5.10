@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-2.0-only
+config NFC_ST54
+	tristate "ST54 I2C NFC Transceiver driver"
+	depends on I2C
+	help
+	This enables the ST NFC driver for ST54 transceiver.
+	This makes use of I2C framework to communicate with transceiver.
+
+	Say Y here to compile support for ST NFC transceiver ST54
+	linux driver into the kernel or say M to compile it as module.

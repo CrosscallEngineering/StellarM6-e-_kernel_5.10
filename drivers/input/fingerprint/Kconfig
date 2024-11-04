@@ -1,0 +1,41 @@
+config HBSP_FINGERPRINT
+	tristate "fingerprint drvier support"
+	help
+	  Say Y here to enable fingerprint driver support!
+
+config FINGERPRINT_SUNWAVE
+	tristate "SUNWAVE SW9651 fingerprint drvier support"
+	depends on HBSP_FINGERPRINT
+	help
+	  Say Y here to enable sunwave sw9651 driver support!
+
+config FINGERPRINT_CHIPONE
+	tristate "CHIPONE fingerprint driver support"
+	depends on HBSP_FINGERPRINT
+	help
+	  Say Y here to enable CHIPONE Fingerpirnt driver support!
+
+config FINGERPRINT_FOCALTECH
+	tristate "CHIPONE fingerprint driver support"
+	depends on HBSP_FINGERPRINT
+	help
+	  Say Y here to enable CHIPONE Fingerpirnt driver support!
+
+config FINGERPRINT_FPC_FPC1542
+	tristate "FPC FPC1542 fingerprint drvier support"
+	depends on HBSP_FINGERPRINT
+	help
+	  Say Y here to enable FPC FPC1542 driver support!
+
+config FP_LOGIC_PWR_CTRL_COMMON
+	tristate "common finger LOGIC CURRRENT-LIMITING FUNCTION SUPPORT"
+	depends on HBSP_FINGERPRINT
+	help
+	  Say Y here to enable common current-limiting function support!
+
+config FP_REPORT_WAKEUP_KEY
+	bool "fingerprint report wakeup system key"
+	default n
+	depends on HBSP_DEBUG_CTRL && KEYBOARD_GPIO
+	help
+	  Say Y here to enable fingerprint report wakeup key event

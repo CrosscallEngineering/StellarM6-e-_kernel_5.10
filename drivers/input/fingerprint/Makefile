@@ -1,0 +1,3 @@
+obj-$(CONFIG_FINGERPRINT_FPC_FPC1542) += fpc/
+obj-$(CONFIG_FINGERPRINT_FOCALTECH) += focaltech_fp/
+obj-$(CONFIG_FP_LOGIC_PWR_CTRL_COMMON) += fp_logic/

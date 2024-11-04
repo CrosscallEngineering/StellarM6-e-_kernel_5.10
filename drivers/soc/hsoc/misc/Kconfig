@@ -1,0 +1,13 @@
+
+config SIM_SWITCH_CTRL
+	tristate "enable sim switch control"
+	default n
+	help
+	  Say 'y' here to enable sim switch control
+
+config SIM_PLUG_REPORT
+	bool "sim plug pin irq status report"
+	depends on SIM_SWITCH_CTRL
+	default n
+	help
+	  Say 'y' here to enable plug pin irq status report

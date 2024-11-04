@@ -1,0 +1,48 @@
+config MACH_HSOC_SMARTPHONE
+	tristate "HSOC DEVICE"
+	default n
+	help
+	  Support for the HSOC samrtphone board.
+
+config HVENDOR_NAME
+	depends on MACH_HSOC_SMARTPHONE
+	string "H-vendor info"
+	default ""
+	help
+	  The vendor name of product.
+
+config HPRODUCT_NAME
+	depends on MACH_HSOC_SMARTPHONE
+	string "H-product info"
+	default ""
+	help
+	  The product name.
+
+config PRODUCT_BASEINFO
+	depends on MACH_HSOC_SMARTPHONE
+	tristate "device base info of H-product"
+	help
+	  Provide a methed to register the peripheral device
+	  infomation of product.
+
+config PRODUCT_DEVINFO
+	depends on PRODUCT_BASEINFO
+	bool "device info register of product"
+	default y
+	help
+	  Provide a methed to register the peripheral device
+	  infomation of product.
+
+config BSP_DEBUG_CTRL
+	bool "debug code ctrl"
+	depends on PRODUCT_BASEINFO
+	default y
+	help
+	  Say Y when you need debug your device.
+
+config BOOT_FLOW
+	bool "boot flow"
+	depends on MACH_HSOC_SMARTPHONE
+	default n
+	help
+	  Provide the special boot flow.

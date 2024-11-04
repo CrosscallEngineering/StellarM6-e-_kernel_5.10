@@ -1,0 +1,5 @@
+config QCOM_CHIP_EFUSE
+	tristate "read the fuse status for qcom chip"
+	depends on MACH_HSOC_SMARTPHONE
+	help
+	  add the fuse status node to read qcom chip efuse status
